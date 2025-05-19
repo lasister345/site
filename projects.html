@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Проекты | Leoni 3D</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Хедер -->
+  <header>
+    <div class="header-container container">
+      <a href="index.html" class="logo">Leoni&nbsp;<span>3D</span></a>
+      <ul class="nav-menu">
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="courses.html">Курсы</a></li>
+        <li><a href="projects.html" class="active">Проекты</a></li>
+        <li><a href="community.html">Комьюнити</a></li>
+        <li><a href="blog.html">Блог</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <a href="login.html" class="btn-login">Вход</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Герой-секция -->
+    <section class="hero-projects" style="background-color: #fff6eb;">
+      <div class="container">
+        <h1 class="hero-title">Галерея проектов</h1>
+          <p class="hero-subtitle">Лучшие работы наших студентов и преподавателей</p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <i class="fas fa-project-diagram" style="color: #ff7b25;"></i>
+            <span>250+</span>
+            <p>Реализованных проектов</p>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-user-graduate" style="color: #ff7b25;"></i>
+            <span>120+</span>
+            <p>Участников комьюнити</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Фильтры -->
+    <section class="filters" style="background-color: #fff;">
+      <div class="container">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Все работы</button>
+          <button class="filter-btn" data-filter="architecture"><i class="fas fa-city"></i> Архитектура</button>
+          <button class="filter-btn" data-filter="characters"><i class="fas fa-user-astronaut"></i> Персонажи</button>
+          <button class="filter-btn" data-filter="products"><i class="fas fa-cube"></i> Продуктовый дизайн</button>
+          <button class="filter-btn" data-filter="games"><i class="fas fa-gamepad"></i> Игровые модели</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Галерея проектов -->
+    <section class="projects-gallery">
+      <div class="container">
+        <div class="projects-grid">
+          <!-- Проект 1 -->
+          <div class="project-card" data-category="architecture">
+            <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115" alt="3D архитектура">
+            <div class="project-info">
+              <h3>Современная вилла</h3>
+              <p><i class="fas fa-user" style="color: #ff7b25;"></i> Анна К.</p>
+              <div class="project-meta">
+                <span><i class="fas fa-clock" style="color: #ff7b25;"></i> 3 недели</span>
+                <a href="#" class="btn-view"><i class="fas fa-eye"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Проект 2 -->
+          <div class="project-card" data-category="characters">
+            <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55" alt="3D персонаж">
+            <div class="project-info">
+              <h3>Кибер-воин</h3>
+              <p><i class="fas fa-user" style="color: #ff7b25;"></i> Максим И.</p>
+              <div class="project-meta">
+                <span><i class="fas fa-clock" style="color: #ff7b25;"></i> 2 месяца</span>
+                <a href="#" class="btn-view"><i class="fas fa-eye"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Проект 3 -->
+          <div class="project-card" data-category="products">
+            <img src="https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d" alt="3D продукт">
+            <div class="project-info">
+              <h3>Эко-упаковка</h3>
+              <p><i class="fas fa-user" style="color: #ff7b25;"></i> Ольга С.</p>
+              <div class="project-meta">
+                <span><i class="fas fa-clock" style="color: #ff7b25;"></i> 1 месяц</span>
+                <a href="#" class="btn-view"><i class="fas fa-eye"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Проект 4 -->
+          <div class="project-card" data-category="games">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e" alt="Игровая сцена">
+            <div class="project-info">
+              <h3>Фэнтези-локация</h3>
+              <p><i class="fas fa-user" style="color: #ff7b25;"></i> Дмитрий П.</p>
+              <div class="project-meta">
+                <span><i class="fas fa-clock" style="color: #ff7b25;"></i> 3 месяца</span>
+                <a href="#" class="btn-view"><i class="fas fa-eye"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Проект 5 -->
+          <div class="project-card" data-category="architecture">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" alt="Интерьер">
+            <div class="project-info">
+              <h3>Лофт-пространство</h3>
+              <p><i class="fas fa-user" style="color: #ff7b25;"></i> Елена М.</p>
+              <div class="project-meta">
+                <span><i class="fas fa-clock" style="color: #ff7b25;"></i> 4 недели</span>
+                <a href="#" class="btn-view"><i class="fas fa-eye"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Проект 6 -->
+          <div class="project-card" data-category="characters">
+             <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="3D модель робота">
+            <div class="project-info">
+              <h3>Робот-помощник</h3>
+              <p><i class="fas fa-user" style="color: #ff7b25;"></i> Артем Л.</p>
+              <div class="project-meta">
+                <span><i class="fas fa-clock" style="color: #ff7b25;"></i> 6 недель</span>
+                <a href="#" class="btn-view"><i class="fas fa-eye"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция "Как создаются проекты" -->
+    <section class="project-process" style="background-color: #fff6eb;">
+      <div class="container">
+        <h2 class="section-title">Как создаются наши проекты</h2>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-icon" style="background-color: #ff7b25;">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Идея</h3>
+            <p>Обсуждение концепции и технического задания</p>
+          </div>
+          <div class="process-step">
+            <div class="step-icon" style="background-color: #ff7b25;">
+              <i class="fas fa-pencil-ruler"></i>
+            </div>
+            <h3>Прототип</h3>
+            <p>Создание черновой модели и утверждение</p>
+          </div>
+          <div class="process-step">
+            <div class="step-icon" style="background-color: #ff7b25;">
+              <i class="fas fa-magic"></i>
+            </div>
+            <h3>Детализация</h3>
+            <p>Текстурирование и проработка деталей</p>
+          </div>
+          <div class="process-step">
+            <div class="step-icon" style="background-color: #ff7b25;">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Результат</h3>
+            <p>Финальный рендер и презентация</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция CTA -->
+    <section class="cta-section" style="background-color: #333; padding: 60px 0;">
+  <div class="container">
+    <h2 style="margin-bottom: 15px;">Хотите такой же крутой проект?</h2>
+    <p style="margin-bottom: 30px;">Запишитесь на курсы и создайте свое портфолио</p>
+    <a href="courses.html" class="btn-primary" style="display: inline-block;">Выбрать курс</a>
+  </div>
+</section>
+  </main>
+
+  <!-- Футер -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>О школе</h4>
+        <p><a href="about.html">О нас</a></p>
+        <p><a href="courses.html">Курсы</a></p>
+        <p><a href="projects.html">Проекты</a></p>
+      </div>
+      <div class="footer-column">
+        <h4>Сообщество</h4>
+        <p><a href="community.html">Комьюнити</a></p>
+        <p><a href="blog.html">Блог</a></p>
+        <p><a href="#">Галерея</a></p>
+      </div>
+      <div class="footer-column">
+        <h4>Контакты</h4>
+        <p><a href="contacts.html">Связаться с нами</a></p>
+        <div class="footer-socials">
+         <a href="#"><i class="fab fa-vk"></i></a>
+          <a href="#"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Фильтрация проектов
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelector('.filter-btn.active').classList.remove('active');
+        this.classList.add('active');
+        
+        const filter = this.dataset.filter;
+        const projects = document.querySelectorAll('.project-card');
+        
+        projects.forEach(project => {
+          if (filter === 'all' || project.dataset.category === filter) {
+            project.style.display = 'block';
+          } else {
+            project.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
