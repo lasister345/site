@@ -1,0 +1,1863 @@
+/* Базовые стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Шапка сайта */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #333;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #ff7b25;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  position: relative;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.nav-menu li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #ff7b25;
+  transition: width 0.3s ease;
+}
+
+.nav-menu li a:hover::after {
+  width: 100%;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Герой секция */
+.hero {
+  background: linear-gradient(135deg, #fef5e4 0%, #ffffff 100%);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero h1 span {
+  color: #ff7b25;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: #ff7b25;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  position: relative;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.cta-button::before {
+  content: '→';
+  position: absolute;
+  left: 0.75rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #fff8f0; /* светлый фон */
+  border-color: #ff7b25;     /* оранжевая рамка */
+  color: #ff7b25;            /* оранжевый текст */
+}
+
+.cta-button:hover::before {
+  opacity: 0; /* отключаем стрелочку */
+  transform: translateX(-10px);
+  pointer-events: none;
+}
+
+/* Секции */
+section {
+  padding: 4rem 0;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1.2rem;
+}
+
+ul li {
+  margin-bottom: 0.75rem;
+}
+
+
+.why-3d-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.why-card {
+  background: #fff6eb;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 1.8rem 2rem;
+  flex: 1 1 220px;
+  max-width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+}
+
+.why-card .icon {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #ff7b25;
+}
+
+.why-card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.feature {
+  background: #fff6eb;
+  border-radius: 12px;
+  padding: 2rem;
+  flex: 1 1 300px;
+  max-width: 360px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #ff7b25;
+}
+
+/* Карточки преимуществ */
+.benefits {
+  background: #fff4e6;
+}
+
+.benefit-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.benefit-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 340px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-left: 4px solid #ff7b25;
+}
+
+.benefit-card h3 {
+  margin-bottom: 0.75rem;
+  color: #ff7b25;
+  font-size: 1.2rem;
+}
+
+/* Карточки тарифов */
+.pricing {
+  background-color: #fff6eb;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  width: 360px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  border: 2px solid #ff7b25;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 520px;
+  text-align: center;       /* Центрируем текст */
+}
+
+.card .price {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ff7b25;
+  margin: 1rem 0 1.5rem 0;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  color: #ff7b25;
+  font-size: 1.7rem;        /* Немного увеличил шрифт */
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.card ul {
+  padding-left: 0;          /* Убираем отступ слева */
+  margin: 0 auto 1.5rem;    /* Центрируем список и добавляем нижний отступ */
+  list-style: none;         /* Убираем стандартные маркеры */
+  max-width: 280px;         /* Ограничиваем ширину списка */
+  text-align: left;         /* Но текст в списке слева для удобства чтения */
+  font-size: 1.1rem;        /* Увеличиваем размер шрифта */
+  color: #444;
+}
+
+.card ul li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.card ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #ff7b25;
+  font-weight: bold;
+  font-size: 1.2rem;
+  top: 0;
+}
+
+.card .btn {
+  display: inline-block;
+  margin-top: auto;
+  background-color: #ff7b25;
+  color: #fff;
+  padding: 0.9rem 1.8rem;   /* чуть увеличены отступы */
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card .btn:hover,
+.card .btn:focus {
+  background-color: #fff;
+  color: #ff7b25;
+  border-color: #ff7b25;
+  transform: none;
+}
+
+/* Отзывы */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Блог */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.article-card {
+  padding: 1.5rem;
+  background: #fafafa;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.article-card:hover {
+  background: #fff0dc;
+}
+
+.article-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.article-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.article-card h3 a {
+  color: #ff7b25;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.article-card h3 a:hover {
+  color: #d47010;
+}
+
+.article-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Подправим отступы карточек, чтобы лучше смотрелось */
+.articles-grid {
+  gap: 2.5rem;
+}
+
+/* CTA */
+.cta-section {
+  background: linear-gradient(135deg, #fff5e5, #ffffff);
+  text-align: center;
+}
+
+.testimonial-slider {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-wrapper {
+  overflow: hidden;
+  flex: 1;
+}
+
+.testimonial-wrapper {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  min-height: 230px; /* Чтобы высота не прыгала */
+}
+
+.testimonial-wrapper > .testimonial {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  background: #f4f4f4;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.testimonial-wrapper > .testimonial.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.stars {
+  color: #ff7b25;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial span {
+  font-weight: 700;
+  color: #555;
+}
+
+.testimonial {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.testimonial.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+/* Кнопки слайдера */
+.slider-btn {
+  background: #ff7b25;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.slider-btn:hover {
+  background: #d4710c;
+}
+
+.slider-btn:focus {
+  outline: 2px solid #ff7b25;
+  outline-offset: 2px;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+  .testimonial-slider {
+    flex-direction: column;
+  }
+  .slider-btn {
+    margin: 1rem 0 0 0;
+  }
+}
+
+/* Футер */
+footer {
+  background: #ff7b25;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-weight: 500;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .nav-menu {
+    gap: 1rem;
+    justify-content: center;
+  }
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+  .container {
+    width: 95%;
+  }
+  .pricing-cards, .features, .benefit-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.85rem 1.6rem;
+  }
+  .card {
+    width: 90%;
+  }
+}
+
+footer {
+  background: #ff7b25;
+  color: white;
+  padding: 3rem 1rem;
+  font-weight: 500;
+  width: 100%;
+  box-sizing: border-box;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+footer .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  text-align: left;
+}
+
+footer .footer-column {
+  flex: 1 1 220px;
+  min-width: 150px;
+}
+
+footer h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+footer p, footer a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #d4710c;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.footer-socials a {
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #d4710c;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  footer .footer-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+  footer .footer-column {
+    flex: none;
+    min-width: auto;
+    margin-bottom: 2rem;
+  }
+  .footer-socials {
+    justify-content: center;
+  }
+}
+
+.header-container {
+  display: flex;
+  align-items: center;  /* выравнивание по центру */
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 28px;
+  color: #FF6600;
+  text-decoration: none;
+  display: flex;
+  align-items: center; /* по центру по высоте */
+}
+
+.logo span {
+  font-weight: 400;
+  color: #333;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: center;
+  /* ниже отступ сверху, чтобы немного опустить */
+  padding-top: 6px;  /* или 5-8px можно подобрать под дизайн */
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center; /* чтобы текст выравнивался по вертикали */
+  height: 100%;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+  color: #FF6600;
+}
+
+.btn-login {
+  padding: 8px 22px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #FF6600;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+  background-color: #fff;
+  color: #FF6600;
+  border-color: #FF6600;
+}
+
+/*about*/
+/* Hero блок About */
+.about-hero {
+  background-color: #fff6eb;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.about-hero h1 {
+  font-size: 2.5rem;
+  color: #ff7b25;
+  margin-bottom: 1rem;
+}
+.about-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Общий блок секций */
+.about-block {
+  padding: 4rem 2rem;
+}
+.about-block h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Сетка карточек */
+.cards-row {
+  display: grid;
+  gap: 2rem;
+}
+.cards-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.cards-3 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.cards-4 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* Универсальные карточки */
+.about-card {
+  background: #fff;
+  border: 2px solid #ff7b25;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.about-card:hover {
+  transform: translateY(-5px);
+}
+.about-card .emoji {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.about-card h3 {
+  color: #ff7b25;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.about-card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Блок команды с фоном */
+.about-team-bg {
+  background-color: #fff6eb;
+  padding: 4rem 2rem;
+}
+.about-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Секция "Связаться с нами" */
+.contact-us {
+  text-align: center;
+}
+.contact-us a {
+  color: #ff7b25;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.contact-us a:hover {
+  color: #d4710c;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+  .about-block h2 {
+    font-size: 1.7rem;
+  }
+  .about-card {
+    padding: 1.5rem;
+  }
+  .about-card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+.hero-about {
+  background-color: #fff6eb;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.hero-about h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.hero-about p {
+  font-size: 1.125rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.hero-about .cta-button {
+  background-color: #ff7b25;
+  color: white;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-about .cta-button:hover {
+  background-color: #fff;
+  color: #ff7b25;
+  border-color: #ff7b25;
+}
+
+.hero-about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.hero-about h1 span {
+  color: #ff7b25;
+}
+
+.hero-about {
+  background-color: #fff6eb;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.hero-subtitle {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+}
+
+.orange-text {
+  color: #ff7b25;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  color: #555;
+  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cta-button {
+  background-color: #ff7b25;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: #fff;
+  color: #ff7b25;
+  border-color: #ff7b25;
+}
+
+.about-stats {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about-stats h2 {
+  font-size: 2rem;
+  color: #ff7b25;
+  margin-bottom: 2.5rem;
+  font-weight: 800;
+}
+
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  background: #fff;
+  border: 2px solid #ff7b25;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  flex: 1 1 180px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #ff7b25;
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+  .stats-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* Блок "Наши достижения" */
+.about-block h2 {
+  text-align: center; /* Центрируем заголовок */
+  margin-bottom: 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 равных колонки */
+  gap: 1.5rem;
+  max-width: 1200px; /* ширина как у всех основных блоков */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stat-item {
+  background: #fff;
+  border: 2px solid #ff7b25;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  font-size: 2rem; /* Размер цифр */
+  font-weight: 800;
+  color: #ff7b25;
+  margin-bottom: 0.3rem;
+}
+
+.stat-item p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+
+/* --- Стили для courses.html --- */
+
+.hero-courses {
+  background-color: #fff6eb;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.hero-courses h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  color: #333;
+  line-height: 1.3;
+}
+
+.hero-courses h1 span {
+  color: #ff7b25;
+}
+
+.hero-courses p {
+  font-size: 1.125rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.hero-courses .cta-button {
+  background-color: #ff7b25;
+  color: white;
+  padding: 1rem 2.2rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  display: inline-block;
+}
+
+.hero-courses .cta-button:hover,
+.hero-courses .cta-button:focus {
+  background-color: #fff;
+  color: #ff7b25;
+  border-color: #ff7b25;
+  outline: none;
+}
+
+/* Карточки курсов */
+
+.courses-list {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  padding: 3rem 1rem 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 14px;
+  border: 2px solid #ff7b25;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.07);
+  padding: 2.4rem 2rem;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+}
+
+.course-card h3 {
+  color: #ff7b25;
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.course-card .duration {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.course-card .description {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+
+.course-card h4 {
+  color: #ff7b25;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.course-card ul {
+  list-style: disc inside;
+  color: #555;
+  margin-bottom: 1.8rem;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  padding-left: 1rem;
+}
+
+.course-card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.course-card .price {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #ff7b25;
+  margin-bottom: 1.6rem;
+}
+
+.course-card .btn {
+  background-color: #ff7b25;
+  color: white;
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  align-self: center;
+  width: 140px;
+}
+
+.course-card .btn:hover,
+.course-card .btn:focus {
+  background-color: #fff;
+  color: #ff7b25;
+  border-color: #ff7b25;
+  outline: none;
+}
+
+@media (max-width: 1024px) {
+  .courses-list {
+    justify-content: center;
+  }
+  .course-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+/*courses.html*/
+
+/* Герой секция курсов */
+.hero-courses {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* Секция о курсах */
+.about-courses {
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.course-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.course-item:hover {
+  transform: translateY(-10px);
+}
+
+.course-icon {
+  font-size: 2.5rem;
+  color: #0077ff;
+  margin-bottom: 20px;
+}
+
+.course-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.course-features {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.course-features li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.course-features i {
+  margin-right: 10px;
+  color: #0077ff;
+}
+
+.btn-course {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #0077ff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-course:hover {
+  background: #0055cc;
+}
+
+/* Преимущества */
+.course-benefits {
+  padding: 80px 0;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 30px;
+}
+
+.benefit-item i {
+  font-size: 2.5rem;
+  color: #0077ff;
+  margin-bottom: 20px;
+}
+
+.benefit-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Стили для тарифов */
+.pricing-section {
+  padding: 80px 0;
+}
+
+.pricing-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding: 30px;
+  width: 320px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card.popular {
+  border: 2px solid #ff7b25;
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: #ff7b25;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pricing-header h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.pricing-header p {
+  color: #777;
+}
+
+.pricing-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  flex-grow: 1;
+}
+
+.pricing-features li {
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.pricing-features i {
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+
+.pricing-footer {
+  text-align: center;
+  margin-top: auto;
+}
+
+.btn-orange {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #ff7b25;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #ff7b25;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-orange:hover {
+  background: white;
+  color: #ff7b25;
+  border-color: #ff7b25;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Адаптивность */
+@media (max-width: 992px) {
+  .pricing-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pricing-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* Секции преимуществ */
+.benefits-section, 
+.results-section, 
+.process-section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+/* Сетка преимуществ (4 колонки) */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.benefit-card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.benefit-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.benefit-list {
+  list-style: none;
+  padding: 0;
+}
+
+.benefit-list li {
+  margin-bottom: 12px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.benefit-list i {
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+
+/* Сетка результатов */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.result-card {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.result-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.result-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Шаги обучения */
+.process-steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.process-step {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  position: relative;
+  padding-top: 60px;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.process-step h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .benefits-grid,
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-steps {
+    flex-direction: column;
+  }
+}
+
+/* Адаптивность для 4 колонок */
+@media (max-width: 1200px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Стили для страницы проектов */
+.hero-projects {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item i {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.stat-item span {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ff7b25;
+  display: block;
+}
+
+.filters {
+  padding: 30px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.filter-btn.active {
+  background: #ff7b25;
+  color: white;
+  border-color: #ff7b25;
+}
+
+.filter-btn i {
+  font-size: 1rem;
+}
+
+.projects-gallery {
+  padding: 60px 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 20px;
+  background: white;
+}
+
+.project-info h3 {
+  margin-bottom: 10px;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.project-meta span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.btn-view {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #ff7b25;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+}
+
+.project-process {
+  padding: 80px 0;
+}
+
+.project-raboti{
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.process-step {
+  text-align: center;
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.cta-section {
+  padding: 80px 0;
+  text-align: center;
+  background: #333;
+  color: white;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 15px 40px;
+  background: #ff7b25;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 30px;
+  transition: all 0.3s;
+}
+
+.btn-cta:hover {
+  background: #e56a1a;
+  transform: translateY(-3px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .hero-stats {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-buttons {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+}
+
+.cta-section {
+  text-align: center;
+  color: white;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px !important;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 30px !important;
+  opacity: 0.9;
+}
+
+.btn-primary {
+  margin-top: 0; /* Убираем лишний отступ сверху */
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #ff7b25;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #ff7b25;
+}
+
+.btn-primary:hover {
+  background: white;
+  color: #ff7b25;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
